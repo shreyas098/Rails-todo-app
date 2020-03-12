@@ -24,8 +24,14 @@
     <%= form.text_area :text %>
   </p>
 
+   <p>
+      <%= form.label(:checkbox, "Favorite") %>
+      <%= form.check_box :checkbox %>
+    </p>
+
   <p>
     <%= form.submit %>
   </p>
+
 
 <% end %>

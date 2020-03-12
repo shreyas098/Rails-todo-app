@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+  get "/top10_articles", to: 'articles#showtop10'
+  get "/favorites", to:'articles#favorites'
 
 
 resources :articles do

@@ -11,6 +11,15 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def showtop10
+    @articles = Article.order(id: :desc).limit(10)
+  end
+
+
+  def favorites
+    @articles= Article.where(checkbox: true)
+  end
+
   def index
     @articles = Article.all
   end
@@ -43,6 +52,6 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :text)
+      params.require(:article).permit(:title, :text,:checkbox)
     end
 end
