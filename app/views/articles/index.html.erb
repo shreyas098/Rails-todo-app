@@ -20,9 +20,11 @@
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
+
   <% end %>
 </table>
 
 <%= link_to ' Top 10 Articles', top10_articles_path %>
 <br>
-<%= link_to 'Favorites Article', favorites_path%>
+<%= link_to 'Favorites Article', favorites_path%> <br>
+<%= link_to 'Index Page', welcome_index_path%>

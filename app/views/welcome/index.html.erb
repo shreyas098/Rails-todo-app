@@ -1,5 +1,6 @@
 <h1>Hello</h1>
 <%=+@user%>
+<%= current_user.id%>
 <%= link_to 'My Blog', controller: 'articles' %>
 <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
 <h2>Show top 10 articles</h2>
