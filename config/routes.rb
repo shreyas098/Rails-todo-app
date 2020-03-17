@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'welcome/index'
   get "/top10_articles", to: 'articles#showtop10'
   get "/favorites", to:'articles#favorites'
