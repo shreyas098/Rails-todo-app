@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  http_basic_authenticate_with name: "shreyash", password: "secret", except: [:index, :show]
+  # http_basic_authenticate_with name: "shreyash", password: "secret", except: [:index, :show]
   def new
     @article=Article.new
   end
@@ -18,6 +18,10 @@ class ArticlesController < ApplicationController
 
   def favorites
     @articles= Article.where(checkbox: true)
+  end
+
+  def allarticles
+    @articles= Article.all
   end
 
   def index
